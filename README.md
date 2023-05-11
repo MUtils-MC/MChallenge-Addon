@@ -13,7 +13,7 @@ More information - [MUtils Website](https://mutils.net)
 ### - Step 1
 Create a new IntelliJ project and click on `Project from Version Control` and wait for Gradle to load the project.<br>
 <details><summary>Images - Click to unfold</summary>
-<img src="https://static.mutils.de/img/Tutorial-CreateVC.png" width="60%">
+<img src="./files/Tutorial-CreateVC.png" width="60%" >
 </details>
 
 ### - Step 2
@@ -22,9 +22,9 @@ To rename a file or package press ``shift`` + `F6`, enter your new name and refa
 Additionally, you need to apply your changes in the `plugin.yml` file in the ``resources`` folder by changing the `main` attribute.
 <details><summary>Images - Click to unfold</summary>
 Rename a package or file<br>
-<img src="https://static.mutils.de/img/Tutorial-Rename.png" width="50%"><br>---<br>
+<img src="./files/Tutorial-Rename.png" width="50%"><br>---<br>
 Change the main attribute<br>
-<img src="https://static.mutils.de/img/Tutorial-PluginYML.png" width="50%"><br>
+<img src="./files/Tutorial-PluginYML.png" width="50%"><br>
 
 </details>
 
