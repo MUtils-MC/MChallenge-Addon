@@ -15,7 +15,8 @@ import java.util.*
  * @param uuid The unique ID. Don't choose a simple hard coded [uuid], it could conflict with other addons
  */
 enum class AddonMod(val uuid: UUID) {
-    DAMAGE_ON_CHEST_CLICK(UUID.randomUUID());
+    DAMAGE_ON_CHEST_CLICK(UUID.randomUUID()),
+    ;
 
     /**
      * Holds all mod data. Should only be called once at startup to ship all data to the MUtils API
@@ -28,7 +29,7 @@ enum class AddonMod(val uuid: UUID) {
                 DamageOnChest(),
                 AddonManager.getSettings(this),
                 Icon("CHEST", naming = IconNaming(cmp("Chest Damage"), listOf(cmp("You get damage on chest"), cmp("interactions")))),
-                setOf(ChallengeTags.FREE)
+                setOf(ChallengeTags.FUN)
             )
         }
     }

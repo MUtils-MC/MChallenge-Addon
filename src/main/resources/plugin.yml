@@ -1,7 +1,7 @@
 name: MUtils-Challenge-Addon # Replace with your own plugin name. You can use the MUtils namespace to highlight the connection
 load: STARTUP
 version: 103 # Replace with your own plugin version. Should rise on updates
-main: de.miraculixx.challenge.addon.MAddon # Replace your new main class (after changing namespace)
+main: de.miraculixx.challengeAddon # Replace your new main class (after changing namespace)
 api-version: 1.16
 authors: [ Miraculixx ] # Replace with your name
 description: MUtils Challenge Addon - Adds a nice Challenge to MChallenge! # Replace with your fancy description
