@@ -13,7 +13,7 @@ More information - [MUtils Website](https://mutils.net)
 ### - Step 1
 Create a new IntelliJ project and click on `Project from Version Control` and wait for Gradle to load the project.<br>
 <details><summary>Images - Click to unfold</summary>
-<img src="https://static.mutils.de/img/Tutorial-CreateVC.png" width="60%" />
+<img src="https://static.mutils.de/img/Tutorial-CreateVC.png" width="60%">
 </details>
 
 ### - Step 2
