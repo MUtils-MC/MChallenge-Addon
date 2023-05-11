@@ -1,0 +1,14 @@
+name: MUtils-Challenge-Addon # Replace with your own plugin name. You can use the MUtils namespace to highlight the connection
+load: STARTUP
+version: 103 # Replace with your own plugin version. Should rise on updates
+main: de.miraculixx.challenge.addon.MAddon # Replace your new main class (after changing namespace)
+api-version: 1.16
+authors: [ Miraculixx ] # Replace with your name
+description: MUtils Challenge Addon - Adds a nice Challenge to MChallenge! # Replace with your fancy description
+website: https://mutils.net/
+softdepend: [ MUtils-Challenge ] # IMPORTANT - Keep this to load MChallenge before your plugin
+libraries:
+  - "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
+  - "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0-Beta"
+  - "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.7.0-Beta"
+  - "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
