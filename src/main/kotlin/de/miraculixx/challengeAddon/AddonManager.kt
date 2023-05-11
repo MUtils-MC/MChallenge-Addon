@@ -4,6 +4,8 @@ import de.miraculixx.challenge.api.MChallengeAPI
 import de.miraculixx.challenge.api.settings.ChallengeData
 import de.miraculixx.challengeAddon.utils.AddonMod
 import de.miraculixx.challengeAddon.utils.cmp
+import de.miraculixx.challengeAddon.utils.plus
+import de.miraculixx.challengeAddon.utils.prefix
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -42,7 +44,7 @@ object AddonManager {
         // Try to connect to MUtils API
         val api = MChallengeAPI.instance
         if (api == null) {
-            console.sendMessage(cmp("Failed to connect with MUtils-Challenge API!", NamedTextColor.RED))
+            console.sendMessage(prefix + cmp("Failed to connect with MUtils-Challenge API!", NamedTextColor.RED))
             return
         }
 
@@ -51,18 +53,23 @@ object AddonManager {
             try {
                 settings.putAll(Json.decodeFromString<Map<AddonMod, ChallengeData>>(configFile.readText()))
             } catch (e: Exception) {
-                console.sendMessage(cmp("Failed to read settings!"))
-                console.sendMessage(cmp(e.message ?: "Reason Unknown"))
+                console.sendMessage(prefix + cmp("Failed to read settings!"))
+                console.sendMessage(prefix + cmp(e.message ?: "Reason Unknown"))
             }
         }
 
         // Add all mods to MUtils
         AddonMod.values().forEach { mod ->
-            api.addChallenge(mod.uuid, mod.getModData())
+            val prodData = api.addChallenge(mod.uuid, mod.getModData())
+            if (prodData == null) {
+                console.sendMessage(prefix + cmp("Failed to inject ${mod.name} to MChallenge!"))
+                return@forEach
+            }
+            settings[mod] = prodData.data
         }
 
         // Finished
-        console.sendMessage(cmp("MAddon successfully hooked in!"))
+        console.sendMessage(prefix + cmp("Successfully hooked in!"))
     }
 
     /**

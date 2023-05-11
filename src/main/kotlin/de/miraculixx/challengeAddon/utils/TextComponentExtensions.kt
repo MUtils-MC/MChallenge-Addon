@@ -12,6 +12,8 @@ import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.toJavaDuration
 
+val prefix = cmp("MAddon", NamedTextColor.BLUE) + cmp(" >>", NamedTextColor.DARK_GRAY) + cmp(" ")
+
 fun Component.decorate(bold: Boolean? = null, italic: Boolean? = null, strikethrough: Boolean? = null, underlined: Boolean? = null): Component {
     var finalComponent = this
     if (bold != null) finalComponent = finalComponent.decoration(TextDecoration.BOLD, bold)
