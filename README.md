@@ -11,10 +11,11 @@ More information - [MUtils Website](https://mutils.net)
 ---
 
 ## HOW TO
->If you already know how to clone and access repositories, skip to step 3
+>If you already know how to clone and access repositories, skip to step 3.<br>
+> Just make sure to add the ``mutils-addon`` tag
 
 ### - Step 1
-Clone this repository to create your new addon.
+Clone this repository to create your new addon and add the tag ``mutils-addon`` by clicking on the cogwheel in the about section.
 Create a new IntelliJ project and click on `Project from Version Control` and enter your repository URL. Finally, wait for Gradle to load your new project.<br>
 <details><summary>Images - Click to unfold</summary>
 Clone this template repository<br>
