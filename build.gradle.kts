@@ -6,6 +6,8 @@ plugins {
     id("xyz.jpenilla.run-paper") version "1.1.0"
 }
 
+version = "1.0.0"
+
 repositories {
     mavenCentral()
 }
@@ -29,6 +31,9 @@ java {
 }
 
 tasks {
+    assemble {
+        dependsOn(reobfJar)
+    }
     compileJava {
         options.encoding = "UTF-8"
         options.release.set(17)

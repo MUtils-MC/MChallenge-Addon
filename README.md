@@ -5,15 +5,22 @@ You can create MChallenge addons for all platforms as long as MChallenge support
 
 More information - [MUtils Website](https://mutils.net)
 
+> **IMPORTANT**<br>
+> MChallenge addons must be published under the same licence as MUtils ([AGPL v3](https://www.gnu.org/licenses/agpl-3.0.en.html)) and must comply with the [MUtils TOS](https://mutils.net/legal/tos)
+
 ---
 
 ## HOW TO
->If you already know how to clone and access Repositories, skip to step 3
+>If you already know how to clone and access repositories, skip to step 3
 
 ### - Step 1
-Create a new IntelliJ project and click on `Project from Version Control` and wait for Gradle to load the project.<br>
+Clone this repository to create your new addon.
+Create a new IntelliJ project and click on `Project from Version Control` and enter your repository URL. Finally, wait for Gradle to load your new project.<br>
 <details><summary>Images - Click to unfold</summary>
-<img src="./files/Tutorial-CreateVC.png" width="60%" >
+Clone this template repository<br>
+<img src="https://raw.githubusercontent.com/MUtils-MC/.github/main/img/Tutorial-CreateRepo.png" width="60%" ><br>---<br>
+Copy your new repository link into IntelliJ<br>
+<img src="https://raw.githubusercontent.com/MUtils-MC/.github/main/img/Tutorial-CreateVC.png" width="60%" >
 </details>
 
 ### - Step 2
@@ -22,9 +29,9 @@ To rename a file or package press ``shift`` + `F6`, enter your new name and refa
 Additionally, you need to apply your changes in the `plugin.yml` file in the ``resources`` folder by changing the `main` attribute.
 <details><summary>Images - Click to unfold</summary>
 Rename a package or file<br>
-<img src="./files/Tutorial-Rename.png" width="50%"><br>---<br>
+<img src="https://raw.githubusercontent.com/MUtils-MC/.github/main/img/Tutorial-Rename.png" width="50%"><br>---<br>
 Change the main attribute<br>
-<img src="./files/Tutorial-PluginYML.png" width="50%"><br>
+<img src="https://raw.githubusercontent.com/MUtils-MC/.github/main/img/Tutorial-PluginYML.png" width="50%"><br>
 
 </details>
 
