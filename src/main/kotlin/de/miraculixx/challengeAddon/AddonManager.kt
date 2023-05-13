@@ -18,7 +18,7 @@ import java.io.File
  */
 object AddonManager {
     /**
-     * Location of your configuration files. Those settings use the serializer from [ChallengeSetting] to save all data
+     * Location of your configuration files. Those settings use the serializer from ChallengeSetting to save all data
      */
     private val configFile = File("${PluginInstance.dataFolder.path}/settings.json")
 

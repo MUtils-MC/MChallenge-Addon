@@ -8,10 +8,15 @@ import net.axay.kspigot.main.KSpigot
 class MAddon : KSpigot() {
     companion object {
         lateinit var INSTANCE: KSpigot
+        lateinit var addonName: String
     }
 
     override fun load() {
         INSTANCE = this
+        // Don't change your addons name to something different from your plugin name!
+        // Users should be able to easily know the source of a mod.
+        @Suppress("DEPRECATION")
+        addonName = description.name
     }
 
     override fun startup() {

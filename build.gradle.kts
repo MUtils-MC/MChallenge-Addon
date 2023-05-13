@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     // The MChallenge API
-    implementation("de.miraculixx:challenge-api:1.1.0")
+    implementation("de.miraculixx:challenge-api:1.2.0")
 
     // The KSpigot version is not related to the game version
     implementation("net.axay:kspigot:1.19.2")

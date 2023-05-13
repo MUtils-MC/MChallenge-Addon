@@ -8,6 +8,7 @@ import de.miraculixx.challenge.api.settings.ChallengeData
 import de.miraculixx.challenge.api.settings.ChallengeIntSetting
 import de.miraculixx.challenge.api.utils.Icon
 import de.miraculixx.challenge.api.utils.IconNaming
+import de.miraculixx.challengeAddon.MAddon
 import java.util.*
 
 /**
@@ -29,7 +30,8 @@ enum class AddonMod(val uuid: UUID) {
                 DamageOnChest(),
                 AddonManager.getSettings(this),
                 Icon("CHEST", naming = IconNaming(cmp("Chest Damage"), listOf(cmp("You get damage on chest"), cmp("interactions")))),
-                setOf(ChallengeTags.FUN)
+                setOf(ChallengeTags.FUN),
+                MAddon.addonName
             )
         }
     }
