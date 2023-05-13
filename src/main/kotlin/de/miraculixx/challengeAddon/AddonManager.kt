@@ -17,6 +17,10 @@ import java.io.File
  * The core of your addon to communicate with the MUtils API
  */
 object AddonManager {
+    private val jsonInstance = Json {
+        prettyPrint = true
+    }
+
     /**
      * Location of your configuration files. Those settings use the serializer from ChallengeSetting to save all data
      */
@@ -51,7 +55,7 @@ object AddonManager {
         // Try to load all settings data
         if (configFile.exists()) {
             try {
-                settings.putAll(Json.decodeFromString<Map<AddonMod, ChallengeData>>(configFile.readText()))
+                settings.putAll(jsonInstance.decodeFromString<Map<AddonMod, ChallengeData>>(configFile.readText()))
             } catch (e: Exception) {
                 console.sendMessage(prefix + cmp("Failed to read settings!"))
                 console.sendMessage(prefix + cmp(e.message ?: "Reason Unknown"))
@@ -76,6 +80,7 @@ object AddonManager {
      * Should only be called at the server stop/addon stop. Saves all mod settings to disk
      */
     fun saveMods() {
-        configFile.writeText(Json.encodeToString(settings))
+        if (!configFile.exists()) configFile.parentFile.mkdir()
+        configFile.writeText(jsonInstance.encodeToString(settings))
     }
 }
