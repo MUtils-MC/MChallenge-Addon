@@ -12,11 +12,11 @@ import de.miraculixx.challengeAddon.MAddon
 import java.util.*
 
 /**
- * All of our addon mods. Each mod is unique by his [uuid] but not bound to it on each startup. It is only important that the [uuid] is the same at all time of one session.
- * @param uuid The unique ID. Don't choose a simple hard coded [uuid], it could conflict with other addons
+ * All of our addon mods. Each mod is unique by his [uuid]. Generate a random UUID on some generator and replace it for each mod.
+ * @param uuid The unique ID. Use your custom fixed [uuid] value
  */
 enum class AddonMod(val uuid: UUID) {
-    DAMAGE_ON_CHEST_CLICK(UUID.randomUUID()),
+    DAMAGE_ON_CHEST_CLICK(UUID.fromString("00000000-0000-0000-0000-000000000000")), // REPLACE YOUR UUID
     ;
 
     /**
